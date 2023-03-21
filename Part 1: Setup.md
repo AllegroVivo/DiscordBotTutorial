@@ -58,4 +58,23 @@ Now that we’re finished with the bot user setup, head to the `OAuth2` tab on t
 
 ![A screenshot of the Discord Developer Portal OAuth2 settings.](https://user-images.githubusercontent.com/79615185/226678530-c5a45651-c43c-47e1-85a7-740b7ee3f295.png)
 
-Ensure you’ve selected the two scopes shown in the image – `bot` and `applications.commands`.
+Ensure you’ve selected the two scopes shown in the image – `bot` and `applications.commands`. This is simply going to tell Discord that it's okay that we're a bot and that we can create commands. Do note, if you select any other of the available scopes, a new line entitled `Select Redirect URL` will appear. These are for advanced bots that use external systems or APIs, so we won't be needing anything besides the two we've already selected.
+
+After you toggle the `bot` option, another window should appear lower down - the `Bot Permissions` window. As with any good tutorial, I'm going to caution you to be wary of granting too many permissions to a bot, particularly if it goes into production. I've outlined the permissions we'll need for this tutorial in the image below, but I also found that if I'm testing my bot on a private server, simply ticking the `Administrator` permission works just as well. It's up to your preference, just, again, be cautious!
+
+![A screenshot of the bot permissions options that will be required for this project.](https://user-images.githubusercontent.com/79615185/226682922-5ea25eda-91c0-46b7-98ce-97d59ab8f49a.png)
+
+And with that, you can paste the provided link into a browser and invite the bot to your test server. Hopefully you're familiar with the process of getting a bot into a server, because I'm not going to cover that here. The bot won't show as online quite yet, so don't fret. We just want to be sure it's in the server and able to post in the test channel(s) you have set up.
+
+## IDE Choice
+
+Something I want to touch on just briefly before wrapping up is choice of IDE, or Integrated Development Environment. You most likely already have one of these on your computer - I highly doubt you're coding with Notepad, after all - but I just want to clarify that throughout this course I'll be using [PyCharm by JetBrains](https://www.jetbrains.com/pycharm/). If you're unsure on what IDE you like most, or if you're in the market for trying out a variety of options, give PyCharm a go. It's got a variety of extremely helpful functions and the interface is easy to use and very user-friendly.
+
+## Python Packages
+
+I finally want to finish off by installing two of the Python packages we're going to use during the tutorial. In fact, we're going to use these two libraries right off the bat! Run the following two commands separately in a command prompt/PowerShell window, or within your IDE's terminal. (You can also use the package installer that comes bundled with most IDEs as well. We'll be using the following two packages:
++ **Pycord** -- `pip install py-cord` -- A modern, easy-to-use, deature-rich, and async ready fork of the `discord.py` framework.
++ **Dotenv** -- `pip install python-dotenv` -- A library providing support for using `.env`, or environment, files.
+
+
+That concludes the setup portion of this tutorial, so I'll end this section here. See you in the next guide!
