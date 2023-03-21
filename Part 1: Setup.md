@@ -19,8 +19,8 @@ Do note, this tutorial is going to be written for an intermediate-level audience
 One final comment. You’ll notice I use frogs as a recurring theme throughout the tutorial. I find that giving a bot some personality and a theme not only makes the user feel more comfortable, but honestly, it makes the development process a lot more fun and individualistic. Feel free to use your favorite animal!
 
 ## Discord Bot Account Setup
-### Create New Application Instance
-Before we jump into things, there are a handful of setup tasks that we should take a look at. None of them are too difficult or time consuming, but they’re necessary to get up and running. First, we’ll take a look at the [Discord Developer Portal](https://discordapp.com/developers/applications) and create ourselves a bot account. After arriving at that page, ensure you see the words “My Applications”, and click the “New Application” button in the top right.
+#### Create New Application Instance
+Before we jump into things, there are a handful of setup tasks that we should take a look at. None of them are too difficult or time consuming, but they’re necessary to get up and running. First, we’ll take a look at the [Discord Developer Portal](https://discordapp.com/developers/applications) and create ourselves a bot account. After arriving at that page, ensure you see the words “My Applications”, and click the `New Application` button in the top right.
 
 ![A screenshot of an empty My Applications page on the Discord Developer Portal](https://user-images.githubusercontent.com/79615185/226673099-c65c8794-5797-48a0-8df0-f8f7e9f0219b.png)
 
@@ -28,7 +28,8 @@ You’ll be prompted to enter the name of your application…
 
 ![A screenshot of the prompt box for creating a new application.](https://user-images.githubusercontent.com/79615185/226673530-0d7d089c-405d-4b9f-b70c-0ab2f45cb59f.png)
 
-And that’s it! You have a bot! Go ahead and give it a description on the “General Information” page and then, from the navigation pane on the left, select the “Bot” option. You’ll be presented with… a blank page? Don’t fear, we’ll populate that now. Click the Add Bot button at the top right.
+#### Add Bot Instance
+And that’s it! You have a bot! Go ahead and give it a description on the “General Information” page and then, from the navigation pane on the left, select the `Bot` option. You’ll be presented with… a blank page? Don’t fear, we’ll populate that now. Click the Add Bot button at the top right.
 
 ![A screenshot indicating the position of the New Bot button.](https://user-images.githubusercontent.com/79615185/226673707-a09c48f2-c6ac-49f2-a83e-5e395827f445.png)
 
@@ -36,20 +37,25 @@ There’ll be a prompt asking if you’re sure. If you’re not sure, you might 
 
 ![A sample new bot token.](https://user-images.githubusercontent.com/79615185/226674030-eaf410a8-57a0-4191-ac51-1718149051cf.png)
 
-Next up, if we scroll down, there will be a section entitled “Privileged Gateway Intents”. 
+#### Gateway Intents
+Next up, if we scroll down, there will be a section entitled `Privileged Gateway Intents`. 
 
 ![The Privileged Gateway Intents section of the Discord Developer Portal.](https://user-images.githubusercontent.com/79615185/226674380-ee3a5e92-e8e6-4d2c-affd-652d888a99c0.png)
 
 If you want to learn a bit more about what these mean read on, I found it a bit hard to understand at first too, otherwise the short version is you don’t need any of these enabled for this project. 
 
-### Intents
-
 To understand what these intents are, it’s important to understand that Discord has flagged certain pieces of user information as “sensitive” or “privileged”. Think of it like a set of medical records. Only certain individuals have access to certain sections – psychology for mental health, for instance – and to get that access, they need special permission. The same concept applied here. We don’t get, or even want, access to this info unless we need it, in fact, the Discord team personally reviews bots in over 100 servers. So let me go over all three groups of intents.
 
 + **Presence:** This setting allows the bot to have access to users’ Rich Presence. If you’ve ever looked at someone’s profile and see something like this, the section at the bottom is this user’s Rich Presence data. A bot would rarely need to see this information, and since it could potentially be used to creep on someone, it’s privileged.
 
-![Sample user profile with Rich Presence active.](https://user-images.githubusercontent.com/79615185/226675062-cfbf7c83-ad7a-4592-9a82-b9a2014fdcc8.png)
+![Sample user profile with Rich Presence active.](https://user-images.githubusercontent.com/79615185/226680516-f66286f9-d0a4-4cdc-ae32-51b1f61adeb7.png)
 
 + **Server Members:** This particular intent is an umbrella category that covers four different pieces of sensitive information. The Add, Remove, and Update event for members within a guild – pretty straightforward definition of these events - as well as the Thread Members Update event, which is only called when a text channel thread has users added to it.
 + **Message Content:** This is the “*big*” one, and the most recent addition to the privileged intents list. This covers the literal content of messages sent within Discord. So words, images, files, and other message elements sent by human users are forbidden for the bot to access unless it has this intent. This is why the migration from text-based bot commands to slash commands was such a big deal when they rolled it out early-2022. For the duration of this course, you won’t need to access message content as all our functions can be called with slash commands.
 
+#### OAuth2 Settings
+Now that we’re finished with the bot user setup, head to the `OAuth2` tab on the left and click on the `URL Generator` sub-option. You should be presented with a page that looks like the following image.
+
+![A screenshot of the Discord Developer Portal OAuth2 settings.](https://user-images.githubusercontent.com/79615185/226678530-c5a45651-c43c-47e1-85a7-740b7ee3f295.png)
+
+Ensure you’ve selected the two scopes shown in the image – `bot` and `applications.commands`.
