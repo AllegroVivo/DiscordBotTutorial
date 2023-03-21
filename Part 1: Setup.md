@@ -70,9 +70,9 @@ And with that, you can paste the provided link into a browser and invite the bot
 
 Something I want to touch on just briefly before wrapping up is choice of IDE, or Integrated Development Environment. You most likely already have one of these on your computer - I highly doubt you're coding with Notepad, after all - but I just want to clarify that throughout this course I'll be using [PyCharm by JetBrains](https://www.jetbrains.com/pycharm/). If you're unsure on what IDE you like most, or if you're in the market for trying out a variety of options, give PyCharm a go. It's got a variety of extremely helpful functions and the interface is easy to use and very user-friendly.
 
-## Python Packages
+## Project Packages
 
-I finally want to finish off by installing two of the Python packages we're going to use during the tutorial. In fact, we're going to use these two libraries right off the bat! Run the following two commands separately in a command prompt/PowerShell window, or within your IDE's terminal. (You can also use the package installer that comes bundled with most IDEs as well. We'll be using the following two packages:
+I finally want to finish off by installing two of the Python packages we're going to use during the tutorial. In fact, we're going to use these two libraries right off the bat! Run the following two commands separately in a command prompt/PowerShell window, or within your IDE's terminal. (You can also use the package installer that comes bundled with most IDEs as well.) We'll be using the following two packages for now:
 + **Pycord** -- `pip install py-cord` -- A modern, easy-to-use, deature-rich, and async ready fork of the `discord.py` framework.
 + **Dotenv** -- `pip install python-dotenv` -- A library providing support for using `.env`, or environment, files.
 
