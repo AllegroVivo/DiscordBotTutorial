@@ -21,3 +21,5 @@ One final comment. You’ll notice I use frogs as a recurring theme throughout t
 ## Discord Bot Account Setup
 
 Before we jump into things, there are a handful of setup tasks that we should take a look at. None of them are too difficult or time consuming, but they’re necessary to get up and running. First, we’ll take a look at the [Discord Developer Portal](https://discordapp.com/developers/applications) and create ourselves a bot account. After visiting the link I just provided, ensure you’re on the “My Applications” page, and click the “New Application” button in the top right.
+
+![Screenshot of an empty My Applications page on the Discord Developer Portal.](https://imgur.com/9qpbHr0)
