@@ -76,5 +76,18 @@ I finally want to finish off by installing two of the Python packages we're goin
 + **Pycord** -- `pip install py-cord` -- A modern, easy-to-use, deature-rich, and async ready fork of the `discord.py` framework.
 + **Dotenv** -- `pip install python-dotenv` -- A library providing support for using `.env`, or environment, files.
 
+## Typehinting
+
+If you've used a strongly-typed programming language before, such as C#, then typehinting your code will be second nature to you since it's quite literally part of the language. Python is both fortunately and unfortunately a bit ambiguous when it comes to declaring classes within the code. Even moreso when you take into account that variables are not bound to a particular class or data type in Python. You can store a string in a variable one minute, then turn around and put an integer in there next - and that's something we need to be mindful of during our coding. 
+
+So what I'm going to be doing is using Python's typehinting system to help us both understand what types of objects are being passed around within the program, and also to clue our IDE in on the typing of class attributes, variables, and other project elements that wouldn't necessarily be identifiable by your code editor. You'll see the benefit as we continue, or, if you don't believe me, leave out the typehints and see what kind of different experience you get. But, for this tutorial, typehints are the way to go.
+
+In the code for this project, you'll typically see a variable, followed by a colon, and then the name of a class. Like this:
+```
+my_variable: Frog = Frog()
+- or -
+my_variable: int = 42
+```
+This is a pretty basic example since all we're doing is simply calling the constructor of the class we've hinted at (after the colon, but before the equals sign) or assigning a basic number. However, if we didn't do this, despite literally assigning the variable right there, our IDE won't know the type of the variable. Once the IDE knows a piece of data's type, code completion and other hint-like features will be much more robust and helpful as we move along.
 
 That concludes the setup portion of this tutorial, so I'll end this section here. See you in the next guide!
