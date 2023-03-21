@@ -1,4 +1,4 @@
-# Part 1: PROFILES
+# Embedded Profile Creation Part 1: Planning
 
 ## Creating a Bot Instance
 
